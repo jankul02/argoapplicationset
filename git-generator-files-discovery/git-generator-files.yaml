@@ -17,7 +17,7 @@ spec:
       source:
         repoURL: '{{repo.url}}'
         targetRevision: HEAD
-        path: "applicationset/examples/git-generator-files-discovery/apps/guestbook"
+        path: "git-generator-files-discovery/apps/guestbook"
       destination:
         server: https://kubernetes.default.svc
         namespace: 'guestbook-{{cluster.name}}'
