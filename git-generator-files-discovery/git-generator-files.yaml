@@ -17,7 +17,12 @@ spec:
       source:
         repoURL: '{{repo.url}}'
         targetRevision: HEAD
-        path: "git-generator-files-discovery/apps/guestbook"
+        path: "git-generator-files-discovery/apps"
+        helm:
+          parameters:
+          - name: "destNamespace"
+            value: 'guestbook-{{cluster.name}}'
+
       destination:
         server: https://kubernetes.default.svc
-        namespace: 'guestbook-{{cluster.name}}'
+        namespace: 'guestbook'
