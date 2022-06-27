@@ -6,7 +6,7 @@ spec:
   generators:
     - git:
         repoURL: https://github.com/jankul02/argoapplicationset.git
-        revision: HEAD
+        revision:  feature/referencetest
         files:
         - path: "git-generator-files-discovery/cluster-config/**/config.json"
   template:
@@ -16,7 +16,7 @@ spec:
       project: default
       source:
         repoURL: '{{repo.url}}'
-        targetRevision: HEAD
+        targetRevision:  feature/referencetest
         path: "git-generator-files-discovery/apps"
         helm:
           parameters:
